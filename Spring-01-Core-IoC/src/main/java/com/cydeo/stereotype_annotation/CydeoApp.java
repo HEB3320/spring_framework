@@ -8,7 +8,16 @@ public class CydeoApp {
 
     public static void main(String[] args) {
 
-        ApplicationContext context = new AnnotationConfigApplicationContext(ConficCourse.class);
+        ApplicationContext context = new AnnotationConfigApplicationContext(ConfigCourse.class);
+        Java java = context.getBean(Java.class);
+       java.getTeachingHours();
+
+       Selenium selenium = context.getBean(Selenium.class);
+        selenium.getTeachingHours();
+
+        Agile agile =context.getBean(Agile.class);
+        agile.getTeachingHours();
+      //  context.getBean(Agile.class).getTeachingHours();
 
     }
 }

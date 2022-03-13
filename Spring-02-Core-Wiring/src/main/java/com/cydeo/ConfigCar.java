@@ -25,14 +25,13 @@ public class ConfigCar {
 
     //Autowiring
     @Bean
-    Person person(Car car) {
+    Person person(Car s) {
         Person p = new Person();
         p.setName("Mike");
-        p.setCar(car);
+        p.setCar(s);
         return p;
-
-
     }
-
-
 }
+
+
+
